@@ -96,7 +96,7 @@ questions = [
 # New page content
 def new_page():
 
-    ## st.image(r"C:\Users\BU-SUPPORT03\Pictures\00 LOGO IFCAR SOLUTIONS 2024\Logo IFCAR (Fond Transparent).png")
+    st.image(r"Logo.png")
     st.markdown("""
        ### 📊  Découvrez vos Ancres de Carrière avec IFCAR Solutions
        Chez **IFCAR Solutions**, nous comprenons l'importance de connaître vos motivations profondes et vos valeurs professionnelles. C'est pourquoi nous vous proposons un **test d'ancres de carrière gratuit**, conçu pour être **intuitif**, **rapide**, et **perspicace**.
@@ -145,7 +145,7 @@ def main():
 
 def career_anchors_page():
     global model  # Declare that you're using the global model variable
-    ## st.image(r"C:\Users\BU-SUPPORT03\Pictures\00 LOGO IFCAR SOLUTIONS 2024\Logo IFCAR (Fond Transparent).png")
+    st.image(r"Logo.png")
 
     st.title("Test d'orientation des carrières : Par IFCAR Solutions")
 
