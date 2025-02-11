@@ -149,7 +149,6 @@ def career_anchors_page():
 
     st.title("Test d'orientation des carrières : Par IFCAR Solutions")
 
-
     # Initialize session state
     if 'responses' not in st.session_state:
         st.session_state['responses'] = {}
@@ -165,12 +164,14 @@ def career_anchors_page():
     for i, question in enumerate(questions):
         key = f"Q{i+1}"
         st.markdown(f"### {i+1}. {question}")  # Make questions bigger
-        st.session_state['responses'][key] = st.slider(
-            "1 = Pas du tout vrai, 5 = Tout à fait vrai",
-            1, 5, 3,
-            format="%d",
-            key=key,
-            help="1 = Pas du tout vrai, 5 = Tout à fait vrai"
+
+        # Implement the radio buttons for 1 to 5 scale
+        st.session_state['responses'][key] = st.radio(
+            "Sélectionnez votre réponse:",
+            options=[1, 2, 3, 4, 5],
+            index=2,  # Default to the middle (3)
+            horizontal=True,  # Ensures all options appear on the same line
+            key=key
         )
 
     if st.button("Soumettre les réponses"):
@@ -186,7 +187,7 @@ def career_anchors_page():
             if model is None:
                 model = configure_api_key()
 
-            if model is not None: # only proceed if the model is configured
+            if model is not None:  # only proceed if the model is configured
                 response = model.generate_content(prompt)
                 st.subheader("Résultats de l'analyse")
                 st.write(response.text)
@@ -212,6 +213,7 @@ def career_anchors_page():
 
         with col4:
             st.link_button("Notre page Linkedin", "https://www.linkedin.com/company/ifcarsolutions/")
+
 
 
 
