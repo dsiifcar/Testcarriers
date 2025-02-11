@@ -1,4 +1,5 @@
-google-generativeai
 streamlit
 PyMuPDF
+google-generativeai
 python-docx
+IPython
