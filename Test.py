@@ -169,7 +169,7 @@ def career_anchors_page():
         st.session_state['responses'][key] = st.radio(
             "Sélectionnez votre réponse:",
             options=['Pas du tout vrai', 'Pas vraiment', 'Neutre', 'En partie vrai', 'Tout à fait vrai'],
-            ## index=2,  # Default to the middle (3)
+            index=0,  # Default to the middle (3)
             horizontal=True,  # Ensures all options appear on the same line
             key=key
         )
