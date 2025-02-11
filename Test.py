@@ -168,7 +168,7 @@ def career_anchors_page():
         # Implement the radio buttons for 1 to 5 scale
         st.session_state['responses'][key] = st.radio(
             "Sélectionnez votre réponse:",
-            options=['Faux', 2, 3, 4, 5],
+            options=['Pas du tout vrai', 'Pas vraiment', 'Neutre', 'En partie vrai', 'Tout à fait vrai'],
             index=2,  # Default to the middle (3)
             horizontal=True,  # Ensures all options appear on the same line
             key=key
